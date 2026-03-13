@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sip House — Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Great+Vibes&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-bg"></div>
+        <div class="header-content text-center">
+            <p class="header-tagline">Welcome to</p>
+            <h1 class="header-logo">Sip House</h1>
+            <p class="header-sub">Artisan Cafe &amp; Beverage Bar</p>
+            <div class="header-divider"><span>✦</span></div>
+            <p class="header-desc">Scan. Sip. Savour.<br />Browse our handcrafted menu and place your order.</p>
+            <div class="header-badges d-flex justify-content-center flex-wrap gap-2 mt-3">
+                <span class="hbadge"><i class="bi bi-clock"></i> Open 7am - 9pm</span>
+                <span class="hbadge"><i class="bi bi-geo-alt"></i> Table Order</span>
+                <span class="hbadge"><i class="bi bi-leaf"></i> Fresh Daily</span>
+            </div>
+        </div>
+        <div class="header-wave">
+            <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#EEF2DD" />
+            </svg>
+        </div>
+    </header>
+
+    <nav class="cat-nav" id="catNav">
+        <div class="cat-nav-inner">
+            <button class="cat-btn active" onclick="showCategory('all',this)">All</button>
+            <button class="cat-btn" onclick="showCategory('thickshake',this)">Thickshakes</button>
+            <button class="cat-btn" onclick="showCategory('coffee',this)">Coffee</button>
+            <button class="cat-btn" onclick="showCategory('matcha',this)">Matcha</button>
+            <button class="cat-btn" onclick="showCategory('smoothie',this)">Smoothies</button>
+            <button class="cat-btn" onclick="showCategory('milkshake',this)">Milkshakes</button>
+            <button class="cat-btn" onclick="showCategory('mocktail',this)">Mocktails</button>
+            <button class="cat-btn" onclick="showCategory('tea',this)">Tea</button>
+            <button class="cat-btn" onclick="showCategory('iced',this)">Iced Drinks</button>
+            <button class="cat-btn" onclick="showCategory('other',this)">Other Drinks</button>
+            <button class="cat-btn" onclick="showCategory('fruitsalad',this)">Fruit &amp; Custard</button>
+        </div>
+    </nav>
+
+    <main class="menu-main">
+        <div class="container-fluid px-3 px-md-4">
+
+            <!-- THICKSHAKES -->
+            <section class="menu-section" data-cat="thickshake" id="sec-thickshake">
+                <div class="section-heading">
+                    <span class="section-num">01</span>
+                    <div>
+                        <h2 class="section-title">Thickshakes</h2>
+                        <p class="section-sub">Indulgently rich, blended to velvet perfection</p>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&q=80"
+                                    alt="Classic Chocolate Thickshake" class="drink-img" loading="lazy" />
+                                <span class="drink-badge badge-popular">Popular</span>
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Classic Chocolate</h5>
+                                <p class="drink-taste">Deep, velvety dark chocolate blended with full-cream milk and
+                                    rich chocolate ice cream. Sinfully indulgent.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Milk,
+                                        Gluten (malt)</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹320</span><button class="btn-add"
+                                        onclick="addItem('Classic Chocolate Thickshake',320)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1553787499-6f9133242796?w=400&q=80"
+                                    alt="Strawberry Thickshake" class="drink-img" loading="lazy" />
+                                <span class="drink-badge badge-new">New</span>
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Strawberry Dream</h5>
+                                <p class="drink-taste">Sun-ripened strawberries swirled with vanilla bean ice cream.
+                                    Sweet, fruity, blush-pink bliss.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Milk,
+                                        Eggs</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹320</span><button class="btn-add"
+                                        onclick="addItem('Strawberry Dream Thickshake',320)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1625938145744-533d6c45882a?w=400&q=80"
+                                    alt="Caramel Thickshake" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Salted Caramel</h5>
+                                <p class="drink-taste">Buttery caramel ribbons with sea salt, blended thick with creamy
+                                    vanilla ice cream. Sweet meets savoury.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Milk,
+                                        Soy, Eggs</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹349</span><button class="btn-add"
+                                        onclick="addItem('Salted Caramel Thickshake',349)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://www.tablefortwoblog.com/cookies-creme-milkshake/"
+                                    alt="Cookies and Cream" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Cookies &amp; Cream</h5>
+                                <p class="drink-taste">Crushed Oreo cookies blended into premium vanilla ice cream.
+                                    Crunchy, creamy, wildly satisfying.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Milk,
+                                        Gluten, Soy, Eggs</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹349</span><button class="btn-add"
+                                        onclick="addItem('Cookies & Cream Thickshake',349)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- COFFEE -->
+            <section class="menu-section" data-cat="coffee" id="sec-coffee">
+                <div class="section-heading">
+                    <span class="section-num">02</span>
+                    <div>
+                        <h2 class="section-title">Coffee</h2>
+                        <p class="section-sub">Single-origin beans, expert extraction, every cup a ritual</p>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?w=400&q=80"
+                                    alt="Flat White" class="drink-img" loading="lazy" />
+                                <span class="drink-badge badge-popular">Popular</span>
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Signature Flat White</h5>
+                                <p class="drink-taste">Double ristretto with silky micro-foamed full-cream milk. Bold,
+                                    espresso-forward with a smooth clean finish.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Milk,
+                                        Caffeine</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹199</span><button class="btn-add"
+                                        onclick="addItem('Signature Flat White',199)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="C:\Users\Kavya\Downloads\New folder\images\f.jpeg" alt="Rose Latte"
+                                    class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Rose Latte</h5>
+                                <p class="drink-taste">Espresso kissed with Persian rose syrup and steamed oat milk.
+                                    Floral, gentle, and beautifully fragrant.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Oat
+                                        (Gluten), Caffeine</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹249</span><button class="btn-add"
+                                        onclick="addItem('Rose Latte',249)"><i class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80"
+                                    alt="Cold Brew" class="drink-img" loading="lazy" />
+                                <span class="drink-badge badge-new">New</span>
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Cold Brew Vanilla</h5>
+                                <p class="drink-taste">18-hour cold-steeped coffee with Madagascar vanilla over ice.
+                                    Smooth, low-acid, naturally sweet darkness.</p>
+                                <div class="allergen-row"><i
+                                        class="bi bi-exclamation-triangle-fill"></i><span>Caffeine</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹279</span><button class="btn-add"
+                                        onclick="addItem('Cold Brew Vanilla',279)"><i class="bi bi-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=400&q=80"
+                                    alt="Cappuccino" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Classic Cappuccino</h5>
+                                <p class="drink-taste">Equal thirds espresso, steamed milk, and thick velvety foam. A
+                                    timeless Italian classic with warm, nutty depth.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Milk,
+                                        Caffeine</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹179</span><button class="btn-add"
+                                        onclick="addItem('Classic Cappuccino',179)"><i class="bi bi-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1579888071069-c107a6f71f5f?w=400&q=80"
+                                    alt="Mocha" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Dark Cherry Mocha</h5>
+                                <p class="drink-taste">Espresso with single-origin dark chocolate and cherry compote.
+                                    Rich, bittersweet, and deeply complex.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Milk,
+                                        Caffeine, Soy</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹299</span><button class="btn-add"
+                                        onclick="addItem('Dark Cherry Mocha',299)"><i class="bi bi-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=400&q=80"
+                                    alt="Affogato" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Affogato</h5>
+                                <p class="drink-taste">Scorching espresso poured over vanilla bean gelato. Hot meets
+                                    cold — magic in every spoonful.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Milk,
+                                        Eggs, Caffeine</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹319</span><button class="btn-add"
+                                        onclick="addItem('Affogato',319)"><i class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MATCHA -->
+            <section class="menu-section matcha-section" data-cat="matcha" id="sec-matcha">
+                <div class="section-heading">
+                    <span class="section-num">03</span>
+                    <div>
+                        <h2 class="section-title">Matcha</h2>
+                        <p class="section-sub">Ceremonial-grade Japanese green tea — earthy, serene, exquisite</p>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card matcha-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=400&q=80"
+                                    alt="Matcha Latte" class="drink-img" loading="lazy" />
+                                <span class="drink-badge badge-popular">Popular</span>
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Classic Matcha Latte</h5>
+                                <p class="drink-taste">Ceremonial grade matcha whisked to a bright green foam, poured
+                                    over steamed oat milk. Grassy, creamy, and calming.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Oat
+                                        (Gluten), Caffeine</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹279</span><button class="btn-add"
+                                        onclick="addItem('Classic Matcha Latte',279)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card matcha-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1627485937980-221c88ac04f9?w=400&q=80"
+                                    alt="Iced Matcha" class="drink-img" loading="lazy" />
+                                <span class="drink-badge badge-new">New</span>
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Iced Matcha Honey</h5>
+                                <p class="drink-taste">Cold oat milk poured over matcha concentrate and wildflower
+                                    honey. Refreshing with a golden floral sweetness.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Oat
+                                        (Gluten), Honey, Caffeine</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹299</span><button class="btn-add"
+                                        onclick="addItem('Iced Matcha Honey',299)"><i class="bi bi-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card matcha-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=400&q=80"
+                                    alt="Matcha Strawberry" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Matcha Strawberry Bliss</h5>
+                                <p class="drink-taste">Layered matcha and fresh strawberry puree in a gorgeous gradient
+                                    glass. Earthy bitterness meets fruity sweetness.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Milk,
+                                        Caffeine</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹319</span><button class="btn-add"
+                                        onclick="addItem('Matcha Strawberry Bliss',319)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card matcha-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1590301157890-4810ed352733?w=400&q=80"
+                                    alt="Coconut Matcha" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Coconut Matcha Cooler</h5>
+                                <p class="drink-taste">Matcha blended with chilled coconut cream, pandan, and lime.
+                                    Tropical, herbal, and utterly unique.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Tree Nuts
+                                        (Coconut), Caffeine</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹319</span><button class="btn-add"
+                                        onclick="addItem('Coconut Matcha Cooler',319)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SMOOTHIES -->
+            <section class="menu-section" data-cat="smoothie" id="sec-smoothie">
+                <div class="section-heading">
+                    <span class="section-num">04</span>
+                    <div>
+                        <h2 class="section-title">Smoothies</h2>
+                        <p class="section-sub">Whole fruits blended fresh, vibrant and nourishing</p>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=400&q=80"
+                                    alt="Berry Smoothie" class="drink-img" loading="lazy" />
+                                <span class="drink-badge badge-popular">Popular</span>
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Mixed Berry Burst</h5>
+                                <p class="drink-taste">Blueberries, raspberries, strawberries blended with almond milk
+                                    and honey. Tart, tangy, and wildly fresh.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Tree Nuts
+                                        (Almond), Honey</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹299</span><button class="btn-add"
+                                        onclick="addItem('Mixed Berry Burst Smoothie',299)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=400&q=80"
+                                    alt="Mango Smoothie" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Mango Tango</h5>
+                                <p class="drink-taste">Alphonso mango, banana, and coconut milk blended silky smooth.
+                                    Tropical, creamy, sunshine in a glass.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Tree Nuts
+                                        (Coconut)</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹299</span><button class="btn-add"
+                                        onclick="addItem('Mango Tango Smoothie',299)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=400&q=80"
+                                    alt="Green Smoothie" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Green Glow</h5>
+                                <p class="drink-taste">Spinach, cucumber, green apple, ginger, coconut water. Clean,
+                                    crisp, and deeply revitalising.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>None
+                                        common</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹319</span><button class="btn-add"
+                                        onclick="addItem('Green Glow Smoothie',319)"><i class="bi bi-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?w=400&q=80"
+                                    alt="Acai Bowl" class="drink-img" loading="lazy" />
+                                <span class="drink-badge badge-new">New</span>
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Acai Power Bowl</h5>
+                                <p class="drink-taste">Brazilian acai with banana and almond milk, topped with granola,
+                                    fresh berries, and coconut flakes.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Gluten,
+                                        Tree Nuts, Milk</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹449</span><button class="btn-add"
+                                        onclick="addItem('Acai Power Bowl',449)"><i class="bi bi-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MILKSHAKES -->
+            <section class="menu-section" data-cat="milkshake" id="sec-milkshake">
+                <div class="section-heading">
+                    <span class="section-num">05</span>
+                    <div>
+                        <h2 class="section-title">Milkshakes</h2>
+                        <p class="section-sub">Creamy, classic, and unapologetically delicious</p>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=80"
+                                    alt="Vanilla Milkshake" class="drink-img" loading="lazy" />
+                                <span class="drink-badge badge-popular">Popular</span>
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Madagascar Vanilla</h5>
+                                <p class="drink-taste">Real Madagascar vanilla bean blended with full-cream milk. Pure,
+                                    clean sweetness — quality speaks for itself.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Milk,
+                                        Eggs</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹279</span><button class="btn-add"
+                                        onclick="addItem('Madagascar Vanilla Milkshake',279)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=400&q=80"
+                                    alt="Banana Milkshake" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Caramelised Banana</h5>
+                                <p class="drink-taste">Fresh banana with caramel and a dash of cinnamon. Warm,
+                                    nostalgic, and deeply comforting.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Milk,
+                                        Eggs</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹279</span><button class="btn-add"
+                                        onclick="addItem('Caramelised Banana Milkshake',279)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=400&q=80"
+                                    alt="Nutella Milkshake" class="drink-img" loading="lazy" />
+                                <span class="drink-badge badge-new">New</span>
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Nutella Hazelnut</h5>
+                                <p class="drink-taste">Nutella blended with chilled milk and hazelnut praline. Decadent,
+                                    hazelnut-forward, irresistible.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Milk,
+                                        Tree Nuts, Gluten, Eggs, Soy</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹329</span><button class="btn-add"
+                                        onclick="addItem('Nutella Hazelnut Milkshake',329)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?w=400&q=80"
+                                    alt="Mango Milkshake" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Alphonso Mango</h5>
+                                <p class="drink-taste">Indian Alphonso mango pulp with cold milk and a pinch of
+                                    cardamom. Sweet, fragrant, supremely tropical.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Milk,
+                                        Eggs</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹319</span><button class="btn-add"
+                                        onclick="addItem('Alphonso Mango Milkshake',299)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MOCKTAILS -->
+            <section class="menu-section" data-cat="mocktail" id="sec-mocktail">
+                <div class="section-heading">
+                    <span class="section-num">06</span>
+                    <div>
+                        <h2 class="section-title">Mocktails</h2>
+                        <p class="section-sub">Sophisticated zero-proof cocktails, bar-quality without the alcohol</p>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80"
+                                    alt="Virgin Mojito" class="drink-img" loading="lazy" />
+                                <span class="drink-badge badge-popular">Popular</span>
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Virgin Mojito</h5>
+                                <p class="drink-taste">Fresh mint muddled with lime, cane sugar, and sparkling water
+                                    over crushed ice. Crisp, herbaceous, electric.</p>
+                                <div class="allergen-row"><i
+                                        class="bi bi-exclamation-triangle-fill"></i><span>Sulphites</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹249</span><button class="btn-add"
+                                        onclick="addItem('Virgin Mojito',249)"><i class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?w=400&q=80"
+                                    alt="Sunset Mocktail" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Sunset Fizz</h5>
+                                <p class="drink-taste">Passion fruit, orange juice, and grenadine layered for a stunning
+                                    ombre. Tropical, sweet, with a tangy finish.</p>
+                                <div class="allergen-row"><i
+                                        class="bi bi-exclamation-triangle-fill"></i><span>Sulphites</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹269</span><button class="btn-add"
+                                        onclick="addItem('Sunset Fizz Mocktail',269)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1560508180-03f285f67ded?w=400&q=80"
+                                    alt="Lychee Mocktail" class="drink-img" loading="lazy" />
+                                <span class="drink-badge badge-new">New</span>
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Lychee Rose Spritz</h5>
+                                <p class="drink-taste">Lychee syrup and rose water over sparkling water with cucumber
+                                    ribbons. Delicate, perfumed, impossibly elegant.</p>
+                                <div class="allergen-row"><i
+                                        class="bi bi-exclamation-triangle-fill"></i><span>Sulphites</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹299</span><button class="btn-add"
+                                        onclick="addItem('Lychee Rose Spritz',299)"><i class="bi bi-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1497534446932-c925b458314e?w=400&q=80"
+                                    alt="Watermelon Mocktail" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Watermelon Cooler</h5>
+                                <p class="drink-taste">Freshly pressed watermelon with basil simple syrup and soda.
+                                    Light, summery, incredibly refreshing.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>None
+                                        common</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹249</span><button class="btn-add"
+                                        onclick="addItem('Watermelon Cooler',249)"><i class="bi bi-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TEA -->
+            <section class="menu-section" data-cat="tea" id="sec-tea">
+                <div class="section-heading">
+                    <span class="section-num">07</span>
+                    <div>
+                        <h2 class="section-title">Tea</h2>
+                        <p class="section-sub">Single-estate leaves, brewed with care and intention</p>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=80"
+                                    alt="Masala Chai" class="drink-img" loading="lazy" />
+                                <span class="drink-badge badge-popular">Popular</span>
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Masala Chai Latte</h5>
+                                <p class="drink-taste">Cardamom, cinnamon, clove, ginger brewed strong and finished with
+                                    steamed milk. Spicy, aromatic, and warming.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Milk,
+                                        Caffeine</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹199</span><button class="btn-add"
+                                        onclick="addItem('Masala Chai Latte',199)"><i class="bi bi-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=400&q=80"
+                                    alt="Jasmine Tea" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Jasmine Green Tea</h5>
+                                <p class="drink-taste">Hand-rolled green tea scented with fresh jasmine blossoms.
+                                    Subtle, silky, and impossibly elegant.</p>
+                                <div class="allergen-row"><i
+                                        class="bi bi-exclamation-triangle-fill"></i><span>Caffeine</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹169</span><button class="btn-add"
+                                        onclick="addItem('Jasmine Green Tea',169)"><i class="bi bi-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=400&q=80"
+                                    alt="Earl Grey" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Lavender Earl Grey</h5>
+                                <p class="drink-taste">Classic bergamot Earl Grey elevated with dried lavender. Citrusy,
+                                    floral, and wonderfully calming.</p>
+                                <div class="allergen-row"><i
+                                        class="bi bi-exclamation-triangle-fill"></i><span>Caffeine</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹189</span><button class="btn-add"
+                                        onclick="addItem('Lavender Earl Grey Tea',189)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?w=400&q=80"
+                                    alt="Hibiscus Tea" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Hibiscus Rose Hip</h5>
+                                <p class="drink-taste">Ruby-red hibiscus with rose hip and elderflower. Bright, tart,
+                                    floral, and naturally caffeine-free.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>None
+                                        common</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹189</span><button class="btn-add"
+                                        onclick="addItem('Hibiscus Rose Hip Tea',189)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ICED DRINKS -->
+            <section class="menu-section" data-cat="iced" id="sec-iced">
+                <div class="section-heading">
+                    <span class="section-num">08</span>
+                    <div>
+                        <h2 class="section-title">Iced Drinks</h2>
+                        <p class="section-sub">Cool, refreshing, built over crystal ice</p>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=400&q=80"
+                                    alt="Iced Latte" class="drink-img" loading="lazy" />
+                                <span class="drink-badge badge-popular">Popular</span>
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Iced Caramel Latte</h5>
+                                <p class="drink-taste">Double espresso, house caramel, oat milk over ice. Sweet, bold,
+                                    dangerously easy to drink.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Oat
+                                        (Gluten), Caffeine, Soy</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹259</span><button class="btn-add"
+                                        onclick="addItem('Iced Caramel Latte',259)"><i class="bi bi-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?w=400&q=80"
+                                    alt="Iced Chocolate" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Belgian Iced Chocolate</h5>
+                                <p class="drink-taste">Premium Belgian chocolate melted into cold milk over ice with
+                                    chocolate shavings. Rich and elegantly indulgent.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Milk,
+                                        Soy, Gluten</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹259</span><button class="btn-add"
+                                        onclick="addItem('Belgian Iced Chocolate',259)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1499638673689-79a0b5115d87?w=400&q=80"
+                                    alt="Peach Iced Tea" class="drink-img" loading="lazy" />
+                                <span class="drink-badge badge-new">New</span>
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Peach Iced Tea</h5>
+                                <p class="drink-taste">Cold-brewed Ceylon tea with fresh peach puree, mint, and lemon.
+                                    Peachy, clean, and deeply refreshing.</p>
+                                <div class="allergen-row"><i
+                                        class="bi bi-exclamation-triangle-fill"></i><span>Caffeine</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹229</span><button class="btn-add"
+                                        onclick="addItem('Peach Iced Tea',229)"><i class="bi bi-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=400&q=80"
+                                    alt="Lemonade" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Elderflower Lemonade</h5>
+                                <p class="drink-taste">House-pressed lemons with elderflower cordial and sparkling
+                                    water. Bright, zingy, and beautifully perfumed.</p>
+                                <div class="allergen-row"><i
+                                        class="bi bi-exclamation-triangle-fill"></i><span>Sulphites</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹199</span><button class="btn-add"
+                                        onclick="addItem('Elderflower Lemonade',199)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- OTHER DRINKS -->
+            <section class="menu-section" data-cat="other" id="sec-other">
+                <div class="section-heading">
+                    <span class="section-num">09</span>
+                    <div>
+                        <h2 class="section-title">Other Drinks</h2>
+                        <p class="section-sub">Unique blends that defy category</p>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1601924994987-69e26d50dc26?w=400&q=80"
+                                    alt="Turmeric Latte" class="drink-img" loading="lazy" />
+                                <span class="drink-badge badge-popular">Popular</span>
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Golden Turmeric Latte</h5>
+                                <p class="drink-taste">Turmeric, ginger, cinnamon, black pepper with oat milk and honey.
+                                    Anti-inflammatory, warming, deeply nourishing.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Oat
+                                        (Gluten), Honey</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹229</span><button class="btn-add"
+                                        onclick="addItem('Golden Turmeric Latte',229)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?w=400&q=80"
+                                    alt="Hot Chocolate" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Spiced Hot Chocolate</h5>
+                                <p class="drink-taste">Valrhona dark chocolate with chilli, cinnamon, and vanilla. Rich,
+                                    warming, and slightly mysterious.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Milk,
+                                        Soy, Gluten (may contain)</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹249</span><button class="btn-add"
+                                        onclick="addItem('Spiced Hot Chocolate',249)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1546833998-877b37c2e5c6?w=400&q=80"
+                                    alt="Butterfly Pea" class="drink-img" loading="lazy" />
+                                <span class="drink-badge badge-new">New</span>
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Butterfly Pea Blue</h5>
+                                <p class="drink-taste">Thai butterfly pea flower tea that transforms from blue to violet
+                                    with lemon. Magical, earthy, conversation-starting.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>None
+                                        common</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹249</span><button class="btn-add"
+                                        onclick="addItem('Butterfly Pea Blue',249)"><i class="bi bi-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&q=80"
+                                    alt="Lavender Latte" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Lavender Honey Latte</h5>
+                                <p class="drink-taste">Culinary lavender syrup, raw honey, and steamed almond milk.
+                                    Floral, lightly sweet, deeply relaxing.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Tree Nuts
+                                        (Almond), Honey</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹249</span><button class="btn-add"
+                                        onclick="addItem('Lavender Honey Latte',249)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FRUIT CUSTARD SALAD -->
+            <section class="menu-section" data-cat="fruitsalad" id="sec-fruitsalad">
+                <div class="section-heading">
+                    <span class="section-num">10</span>
+                    <div>
+                        <h2 class="section-title">Fruit &amp; Custard</h2>
+                        <p class="section-sub">Fresh seasonal fruits with our house-made vanilla custard</p>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&q=80"
+                                    alt="Fruit Custard" class="drink-img" loading="lazy" />
+                                <span class="drink-badge badge-popular">Popular</span>
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Classic Fruit Custard</h5>
+                                <p class="drink-taste">Seasonal fruits — mango, strawberry, banana, grapes — bathed in
+                                    silky house-made vanilla custard. Sweet and comforting.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Milk,
+                                        Eggs, Gluten</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹349</span><button class="btn-add"
+                                        onclick="addItem('Classic Fruit Custard',349)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=400&q=80"
+                                    alt="Tropical Fruit Bowl" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Tropical Fruit Bowl</h5>
+                                <p class="drink-taste">Papaya, pineapple, kiwi, passionfruit, and coconut shards with
+                                    lime-mint dressing. Fresh, zingy, vibrant.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Tree Nuts
+                                        (Coconut)</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹379</span><button class="btn-add"
+                                        onclick="addItem('Tropical Fruit Bowl',379)"><i class="bi bi-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=400&q=80"
+                                    alt="Berry Trifle" class="drink-img" loading="lazy" />
+                                <span class="drink-badge badge-new">New</span>
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Berry Custard Trifle</h5>
+                                <p class="drink-taste">Layers of sponge, mixed berries, lemon curd, and whipped custard.
+                                    Every bite is a different delight.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Milk,
+                                        Eggs, Gluten, Soy</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹419</span><button class="btn-add"
+                                        onclick="addItem('Berry Custard Trifle',419)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="drink-card">
+                            <div class="drink-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1519996529931-28324d5a630e?w=400&q=80"
+                                    alt="Mango Coconut" class="drink-img" loading="lazy" />
+                            </div>
+                            <div class="drink-body">
+                                <h5 class="drink-name">Mango &amp; Coconut Salad</h5>
+                                <p class="drink-taste">Sliced Alphonso mango with toasted coconut, pomegranate seeds,
+                                    and a rose water honey drizzle. Exotic and perfumed.</p>
+                                <div class="allergen-row"><i class="bi bi-exclamation-triangle-fill"></i><span>Tree Nuts
+                                        (Coconut), Honey</span></div>
+                                <div class="drink-footer"><span class="drink-price">₹399</span><button class="btn-add"
+                                        onclick="addItem('Mango & Coconut Salad',399)"><i
+                                            class="bi bi-plus"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Floating Cart -->
+    <div class="cart-fab" id="cartFab" onclick="openCart()">
+        <i class="bi bi-bag-fill"></i>
+        <span class="cart-fab-count" id="cartCount">0</span>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h4>Your Order</h4>
+            <button class="cart-close" onclick="closeCart()"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty" id="cartEmpty">
+                <div class="cart-empty-icon">🛍️</div>
+                <p>Your bag is empty</p>
+                <small>Add something delicious!</small>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total-row"><span>Subtotal</span><span id="cartTotal" class="cart-total-price">₹0.00</span>
+            </div>
+            <p class="cart-note"><i class="bi bi-info-circle me-1"></i>Show this to staff or call us over</p>
+            <button class="btn-order-now" onclick="placeOrder()"><i class="bi bi-check2-circle me-2"></i>Place
+                Order</button>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div class="order-modal" id="orderModal">
+        <div class="order-modal-card">
+            <div class="order-check">✅</div>
+            <h3>Order Received!</h3>
+            <p>Our staff will be with you shortly.</p>
+            <p class="order-ref">Order Ref: <strong id="orderRef"></strong></p>
+            <button class="btn-order-now" onclick="closeOrderModal()">Perfect, Thanks!</button>
+        </div>
+    </div>
+
+    <!-- Allergen Footer -->
+    <footer class="allergen-footer">
+        <div class="container">
+            <h6 class="allergen-title"><i class="bi bi-shield-exclamation me-2"></i>Allergen Information</h6>
+            <p class="allergen-text">Our kitchen handles all major allergens including <strong>Milk, Eggs, Gluten, Tree
+                    Nuts, Peanuts, Soy, Sesame, Fish, Shellfish, and Sulphites</strong>. Cross-contamination is
+                possible. Please inform staff of any severe allergies before ordering.</p>
+            <p class="allergen-text">🌿 Vegan options available &nbsp;|&nbsp; 🥛 Dairy alternatives: Oat, Almond, Soy,
+                Coconut &nbsp;|&nbsp; 🍬 Sugar-free syrups available on request</p>
+            <p class="footer-copy">© 2025 Sip House Cafe &nbsp;·&nbsp; Made with love</p>
+        </div>
+    </footer>
+
+    <div class="add-toast" id="addToast"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
