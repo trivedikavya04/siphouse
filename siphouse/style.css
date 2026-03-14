@@ -1,24 +1,55 @@
 /* ============================================
-   SIP HOUSE CAFE — Digital Menu
-   Palette: #E7B9C6 #DD716B #9FC76B #EEF2DD #A07D58
+   SIP HOUSE CAFE — Digital Menu (Dark Theme)
+   Palette: #FF8FB7 (light pink) #E83C91 (hot pink) #43334C (deep purple)
    Fonts: Great Vibes (calligraphy) + Cormorant Garamond + Lato
    ============================================ */
 
 :root {
-    --blush: #E7B9C6;
-    --coral: #DD716B;
-    --sage: #9FC76B;
-    --cream: #EEF2DD;
-    --brown: #A07D58;
-    --dark: #2C1A0E;
-    --mid: #6B4226;
-    --lb: #F5E4EC;
-    --ls: #E8F4D6;
+
+    /* Brand Colors */
+    --coral: #E83C91;
+    /* primary hot pink */
+    --blush: #FF8FB7;
+    /* light pink accent */
+    --rose: #FF5EA8;
+    /* mid pink for hover states */
+
+    /* Dark Theme Backgrounds */
+    --cream: #1A1220;
+    /* deepest background — dark purple-black */
+    --card-bg: #231830;
+    /* card surface */
+    --card-bg-2: #2C1E3A;
+    /* slightly lighter card surface */
+    --nav-bg: #1E1528;
+    /* nav background */
+
+    /* Text Colors */
+    --dark: #F2E8F7;
+    /* primary text — near white with purple tint */
+    --mid: #C9A8D4;
+    /* secondary text — muted purple-pink */
+    --brown: #9A7AAA;
+    /* tertiary text — deeper purple */
+
+    /* Supporting */
+    --sage: #7EC84A;
+    /* green badge */
+
+    /* Light backgrounds (dark variants) */
+    --lb: #2E1D3E;
+    --ls: #261B35;
+
+    /* Fonts */
     --font-script: 'Great Vibes', cursive;
     --font-display: 'Cormorant Garamond', Georgia, serif;
     --font-body: 'Lato', sans-serif;
-    --shadow: 0 4px 20px rgba(160, 125, 88, 0.13);
-    --shadow-lg: 0 12px 40px rgba(160, 125, 88, 0.2);
+
+    /* Dark Shadows */
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 12px 40px rgba(232, 60, 145, 0.25);
+
+    /* Layout */
     --radius: 16px;
     --transition: 0.3s cubic-bezier(.4, 0, .2, 1);
 }
@@ -47,7 +78,7 @@ body {
 .site-header {
     position: relative;
     min-height: 340px;
-    background: linear-gradient(160deg, #3d1f0e 0%, #7a3e24 40%, #c4776a 75%, var(--blush) 100%);
+    background: linear-gradient(160deg, #0D0810 0%, #1A0F22 35%, #43334C 65%, #E83C91 88%, #FF8FB7 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,10 +89,7 @@ body {
 .header-bg {
     position: absolute;
     inset: 0;
-    background:
-        radial-gradient(ellipse 60% 60% at 20% 50%, rgba(231, 185, 198, 0.18) 0%, transparent 60%),
-        radial-gradient(ellipse 40% 80% at 80% 30%, rgba(159, 199, 107, 0.1) 0%, transparent 60%);
-    pointer-events: none;
+    background: rgba(0, 0, 0, 0.65);
 }
 
 .header-content {
@@ -74,7 +102,7 @@ body {
     font-size: 0.78rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(255, 255, 255, 0.918);
     margin-bottom: 0.25rem;
 }
 
@@ -84,7 +112,7 @@ body {
     color: #fff;
     line-height: 1;
     margin-bottom: 0.4rem;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 4px 30px rgba(232, 60, 145, 0.5);
     animation: fadeDown 0.9s ease both;
 }
 
@@ -104,29 +132,31 @@ body {
     font-family: var(--font-display);
     font-size: 1rem;
     font-style: italic;
-    color: rgba(255, 255, 255, 0.78);
+    color: rgba(255, 255, 255, 0.918);
     letter-spacing: 0.12em;
     margin-bottom: 0.75rem;
 }
 
 .header-divider {
     font-size: 0.9rem;
-    color: var(--blush);
+    color: #FF8FB7;
     margin: 0.5rem 0;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 .header-desc {
     font-size: 0.88rem;
-    color: rgba(255, 255, 255, 0.65);
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.918);
     line-height: 1.7;
     font-weight: 300;
+
 }
 
 .hbadge {
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 143, 183, 0.25);
+    color: rgba(255, 255, 255, 0.8);
     border-radius: 50px;
     padding: 5px 14px;
     font-size: 0.75rem;
@@ -149,6 +179,7 @@ body {
 .header-wave svg {
     width: 100%;
     display: block;
+
 }
 
 /* ── CATEGORY NAV ────────────────────────── */
@@ -156,10 +187,10 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(238, 242, 221, 0.95);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(160, 125, 88, 0.15);
-    box-shadow: 0 2px 12px rgba(160, 125, 88, 0.1);
+    background: rgba(26, 18, 32, 0.97);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 143, 183, 0.1);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
 }
 
 .cat-nav-inner {
@@ -177,7 +208,7 @@ body {
 .cat-btn {
     flex-shrink: 0;
     background: transparent;
-    border: 1.5px solid rgba(160, 125, 88, 0.2);
+    border: 1.5px solid rgba(255, 143, 183, 0.18);
     border-radius: 50px;
     padding: 6px 16px;
     font-family: var(--font-body);
@@ -191,15 +222,15 @@ body {
 }
 
 .cat-btn:hover {
-    border-color: var(--coral);
-    color: var(--coral);
+    border-color: var(--blush);
+    color: var(--blush);
 }
 
 .cat-btn.active {
     background: var(--coral);
     border-color: var(--coral);
     color: #fff;
-    box-shadow: 0 3px 12px rgba(221, 113, 107, 0.4);
+    box-shadow: 0 3px 16px rgba(232, 60, 145, 0.45);
 }
 
 /* ── MENU MAIN ───────────────────────────── */
@@ -231,13 +262,13 @@ body {
     gap: 16px;
     margin-bottom: 20px;
     padding-bottom: 14px;
-    border-bottom: 1px solid rgba(160, 125, 88, 0.15);
+    border-bottom: 1px solid rgba(255, 143, 183, 0.12);
 }
 
 .section-num {
     font-family: var(--font-script);
     font-size: 2.8rem;
-    color: var(--blush);
+    color: var(--coral);
     line-height: 1;
     flex-shrink: 0;
 }
@@ -262,21 +293,21 @@ body {
 
 /* Matcha section special accent */
 .matcha-section .section-title {
-    color: #3a6b2a;
+    color: #7EC84A;
 }
 
 .matcha-section .section-num {
-    color: #9FC76B;
+    color: #9BC264;
 }
 
 /* ── DRINK CARDS ─────────────────────────── */
 .drink-card {
-    background: #fff;
+    background: var(--card-bg);
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
-    border: 1px solid rgba(160, 125, 88, 0.07);
+    border: 1px solid rgba(255, 143, 183, 0.1);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -285,14 +316,16 @@ body {
 .drink-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
+    border-color: rgba(232, 60, 145, 0.3);
 }
 
 .matcha-card {
-    border-color: rgba(159, 199, 107, 0.25);
+    border-color: rgba(159, 199, 107, 0.15);
 }
 
 .matcha-card:hover {
-    box-shadow: 0 12px 40px rgba(100, 160, 60, 0.2);
+    box-shadow: 0 12px 40px rgba(100, 160, 60, 0.18);
+    border-color: rgba(126, 200, 74, 0.3);
 }
 
 /* Drink Image */
@@ -301,7 +334,7 @@ body {
     width: 100%;
     aspect-ratio: 4/3;
     overflow: hidden;
-    background: var(--cream);
+    background: var(--card-bg-2);
 }
 
 .drink-img {
@@ -371,13 +404,14 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 5px;
-    background: rgba(221, 113, 107, 0.07);
+    background: rgba(232, 60, 145, 0.1);
     border-radius: 8px;
     padding: 5px 8px;
     margin-bottom: 10px;
     font-size: 0.68rem;
-    color: #b84a44;
+    color: #FF8FB7;
     line-height: 1.4;
+    border: 1px solid rgba(232, 60, 145, 0.15);
 }
 
 .allergen-row i {
@@ -399,7 +433,7 @@ body {
     font-family: var(--font-display);
     font-size: 1.15rem;
     font-weight: 700;
-    color: var(--coral);
+    color: var(--blush);
 }
 
 .btn-add {
@@ -416,13 +450,13 @@ body {
     cursor: pointer;
     transition: var(--transition);
     flex-shrink: 0;
-    box-shadow: 0 3px 10px rgba(221, 113, 107, 0.4);
+    box-shadow: 0 3px 14px rgba(232, 60, 145, 0.5);
 }
 
 .btn-add:hover {
-    background: var(--dark);
+    background: var(--blush);
     transform: scale(1.12);
-    box-shadow: 0 5px 16px rgba(44, 26, 14, 0.35);
+    box-shadow: 0 5px 20px rgba(255, 143, 183, 0.45);
 }
 
 .btn-add:active {
@@ -445,13 +479,14 @@ body {
     color: #fff;
     cursor: pointer;
     z-index: 500;
-    box-shadow: 0 8px 28px rgba(221, 113, 107, 0.55);
+    box-shadow: 0 8px 28px rgba(232, 60, 145, 0.6);
     transition: var(--transition);
 }
 
 .cart-fab:hover {
-    background: var(--dark);
+    background: var(--rose);
     transform: scale(1.07);
+    box-shadow: 0 10px 36px rgba(232, 60, 145, 0.7);
 }
 
 .cart-fab-count {
@@ -475,9 +510,9 @@ body {
 .cart-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(44, 26, 14, 0.45);
+    background: rgba(0, 0, 0, 0.65);
     z-index: 600;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(4px);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.35s ease;
@@ -493,7 +528,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: var(--cream);
+    background: var(--card-bg);
     border-radius: 24px 24px 0 0;
     z-index: 700;
     display: flex;
@@ -501,7 +536,8 @@ body {
     max-height: 85vh;
     transform: translateY(100%);
     transition: transform 0.4s cubic-bezier(.4, 0, .2, 1);
-    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 -10px 50px rgba(0, 0, 0, 0.6);
+    border-top: 1px solid rgba(255, 143, 183, 0.12);
 }
 
 .cart-drawer.open {
@@ -513,7 +549,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 18px 20px 14px;
-    border-bottom: 1px solid rgba(160, 125, 88, 0.15);
+    border-bottom: 1px solid rgba(255, 143, 183, 0.1);
 }
 
 .cart-header h4 {
@@ -524,7 +560,7 @@ body {
 }
 
 .cart-close {
-    background: rgba(160, 125, 88, 0.12);
+    background: rgba(255, 143, 183, 0.1);
     border: none;
     width: 34px;
     height: 34px;
@@ -578,7 +614,7 @@ body {
     align-items: center;
     gap: 10px;
     padding: 10px 0;
-    border-bottom: 1px solid rgba(160, 125, 88, 0.1);
+    border-bottom: 1px solid rgba(255, 143, 183, 0.08);
     animation: slideIn 0.25s ease;
 }
 
@@ -610,13 +646,13 @@ body {
     font-family: var(--font-display);
     font-size: 1rem;
     font-weight: 700;
-    color: var(--coral);
+    color: var(--blush);
 }
 
 .btn-remove {
     background: none;
     border: none;
-    color: #ccc;
+    color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
     font-size: 1rem;
     padding: 0;
@@ -630,8 +666,8 @@ body {
 
 .cart-footer {
     padding: 14px 20px 20px;
-    border-top: 1px solid rgba(160, 125, 88, 0.15);
-    background: #fff;
+    border-top: 1px solid rgba(255, 143, 183, 0.1);
+    background: var(--card-bg-2);
     border-radius: 0;
 }
 
@@ -648,7 +684,7 @@ body {
 .cart-total-price {
     font-family: var(--font-display);
     font-size: 1.4rem;
-    color: var(--coral);
+    color: var(--blush);
 }
 
 .cart-note {
@@ -671,19 +707,20 @@ body {
     cursor: pointer;
     transition: var(--transition);
     letter-spacing: 0.03em;
+    box-shadow: 0 4px 20px rgba(232, 60, 145, 0.4);
 }
 
 .btn-order-now:hover {
-    background: var(--dark);
+    background: var(--rose);
     transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(44, 26, 14, 0.3);
+    box-shadow: 0 8px 28px rgba(232, 60, 145, 0.55);
 }
 
 /* ── ORDER MODAL ─────────────────────────── */
 .order-modal {
     position: fixed;
     inset: 0;
-    background: rgba(44, 26, 14, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 900;
     display: flex;
     align-items: center;
@@ -692,7 +729,7 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.35s ease;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(8px);
 }
 
 .order-modal.open {
@@ -701,13 +738,14 @@ body {
 }
 
 .order-modal-card {
-    background: #fff;
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 143, 183, 0.15);
     border-radius: 24px;
     padding: 40px 32px;
     text-align: center;
     max-width: 340px;
     width: 100%;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(232, 60, 145, 0.15);
     transform: scale(0.92);
     transition: transform 0.35s ease;
 }
@@ -745,8 +783,9 @@ body {
     position: fixed;
     bottom: 96px;
     right: 20px;
-    background: var(--dark);
-    color: #fff;
+    background: var(--card-bg-2);
+    border: 1px solid rgba(255, 143, 183, 0.2);
+    color: var(--dark);
     padding: 10px 18px;
     border-radius: 50px;
     font-size: 0.82rem;
@@ -760,6 +799,7 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .add-toast.show {
@@ -769,10 +809,11 @@ body {
 
 /* ── ALLERGEN FOOTER ─────────────────────── */
 .allergen-footer {
-    background: var(--dark);
-    color: rgba(255, 255, 255, 0.6);
+    background: #0D0810;
+    color: rgba(255, 255, 255, 0.45);
     padding: 32px 0 28px;
     margin-top: 20px;
+    border-top: 1px solid rgba(255, 143, 183, 0.08);
 }
 
 .allergen-title {
@@ -791,7 +832,7 @@ body {
 
 .footer-copy {
     font-size: 0.72rem;
-    opacity: 0.4;
+    opacity: 0.35;
     margin-top: 16px;
 }
 
